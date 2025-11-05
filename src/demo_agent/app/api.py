@@ -7,11 +7,19 @@ from demo_agent.agent.runtime import Runner
 from demo_agent.utils import logger
 
 
-runner = Runner()
+_runner = None
 api_bp = Blueprint("chat_api", __name__)
 
 
+def get_runner() -> Runner:
+    global _runner
+    if _runner is None:
+        _runner = Runner()
+    return _runner
+
+
 def _chat_once(user_text: str) -> dict:
+    runner = get_runner()
     conversation = [Message(role="user", content=user_text)]
     prompt = runner.prompt.generator(conversation, runner.memory, runner.tools)
     responses = runner.advisor(prompt, print_response=False)
