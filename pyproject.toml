@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "demo_agent"
+version = "0.1.0"
+description = "Just a hands-on demo of ai agent"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Sure" }]
+
+[tool.setuptools]
+package-dir = {"" = "src"}          # packages live under src/
+
+[tool.setuptools.packages.find]
+where = ["src"]                      # find packages under src/
