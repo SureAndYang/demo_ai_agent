@@ -1,3 +1,7 @@
+Demo’s main code was written by the author from scratch, including key features such as chatting, tool invocation, short-term memory, and long-term memory. A simple web interface based on Flask and the README (except this comment) were later completed with the help of CodeX.
+The purpose of this project is to understand the core functional modules of an AI Agent and, at the same time, to experiment with programming assistants such as Cursor and CodeX.
+==========
+
 demo_agent
 ==========
 
